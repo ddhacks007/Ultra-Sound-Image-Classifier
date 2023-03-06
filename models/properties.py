@@ -1,8 +1,8 @@
 img_w = 224
 img_h = 224
-epochs = 1
+epochs = 20
 batch_size = 16
-dsplit = 0.9
+dsplit = 0.2
 rotation_range = 20
 width_shift_range = 0.1
 height_shift_range = 0.1
