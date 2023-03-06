@@ -1,4 +1,7 @@
 # Ultra-Sound-Image-Classifier
+
+### walkthrough video https://www.youtube.com/watch?v=FVgKaKrnFJo&ab_channel=deepakraju
+
 Ultra sound image classifier for classifying Lung pathalogies
 <li>Covid</li>
 <li> Pneumonia</li>
@@ -32,6 +35,7 @@ You can run the model of your choice by using the following commands below
 <li> python3 VGG_CAM.py -d ../data/output/ </li>
 <li> python3 BALANCED_VGG_CAM.py -d ../data/output/ </li>
 <li> python3 EMERGENCY_NET.py -d ../data/output/ </li>
+
 
 #### Go to the ipynb notebook present in the models directory for running and visualising the results
 
