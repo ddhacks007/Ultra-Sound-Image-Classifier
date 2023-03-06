@@ -1,6 +1,7 @@
 # Ultra-Sound-Image-Classifier
 
-### walkthrough video https://www.youtube.com/watch?v=FVgKaKrnFJo&ab_channel=deepakraju
+### walkthrough video 
+https://www.youtube.com/watch?v=FVgKaKrnFJo&ab_channel=deepakraju </br>
 
 Ultra sound image classifier for classifying Lung pathalogies
 <li>Covid</li>
