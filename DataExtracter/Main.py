@@ -18,29 +18,29 @@ if __name__ == '__main__':
     FINAL_IMG_DIR = os.environ['FINAL_IMG_DIR']
     metadata = pd.read_csv(os.environ['VIDEO_META_DATA'], sep=',', encoding='latin1')
 
-    # if(os.path.exists(DATA_VID_DIR)):
-    #     shutil.rmtree(DATA_VID_DIR)
+    if(os.path.exists(DATA_VID_DIR)):
+        shutil.rmtree(DATA_VID_DIR)
     
-    # if not os.path.exists(FINAL_IMG_DIR):
-    #     os.makedirs(FINAL_IMG_DIR, exist_ok=True)
+    if not os.path.exists(FINAL_IMG_DIR):
+        os.makedirs(FINAL_IMG_DIR, exist_ok=True)
 
-    # os.makedirs(DATA_VID_DIR, exist_ok=True)
-    # os.makedirs(CROPPED_VID_DIR, exist_ok=True)
+    os.makedirs(DATA_VID_DIR, exist_ok=True)
+    os.makedirs(CROPPED_VID_DIR, exist_ok=True)
 
-    # ButterflyExtracter.export_and_rename_bfly_wrt_meta(BUTTERFLY_VID_DIR, DATA_VID_DIR, metadata)
-    # GrepMedEctracter.extract(metadata, DATA_VID_DIR)
-    # LiftlExtracter.extract(metadata, DATA_VID_DIR)
-    # PocusAltasExtracter.extract(metadata, DATA_VID_DIR)
-    # RadiopiaExtracter.extract(metadata, DATA_VID_DIR)
-    # CoreUltraSoundExtracter.extract(metadata, DATA_VID_DIR)
-    # UFExtracter.extract(metadata, DATA_VID_DIR,'!UF')
-    # ScientificPublication.extract(metadata, DATA_VID_DIR)
-    # ClaurisService.extract(metadata, DATA_VID_DIR, CLAURIS_VID_DIR)
-    # logger.info(f"cropping videos ....")
-    # crop_video(DATA_VID_DIR, CROPPED_VID_DIR)
-    # logger.info(f"cropped successfully!")
-    # logger.info("extracting video properties")
-    # FetchVidProperties.extract_vid_properties(DATA_VID_DIR)
+    ButterflyExtracter.export_and_rename_bfly_wrt_meta(BUTTERFLY_VID_DIR, DATA_VID_DIR, metadata)
+    GrepMedEctracter.extract(metadata, DATA_VID_DIR)
+    LiftlExtracter.extract(metadata, DATA_VID_DIR)
+    PocusAltasExtracter.extract(metadata, DATA_VID_DIR)
+    RadiopiaExtracter.extract(metadata, DATA_VID_DIR)
+    CoreUltraSoundExtracter.extract(metadata, DATA_VID_DIR)
+    UFExtracter.extract(metadata, DATA_VID_DIR,'!UF')
+    ScientificPublication.extract(metadata, DATA_VID_DIR)
+    ClaurisService.extract(metadata, DATA_VID_DIR, CLAURIS_VID_DIR)
+    logger.info(f"cropping videos ....")
+    crop_video(DATA_VID_DIR, CROPPED_VID_DIR)
+    logger.info(f"cropped successfully!")
+    logger.info("extracting video properties")
+    FetchVidProperties.extract_vid_properties(DATA_VID_DIR)
     if os.path.exists(IMG_DIR):
         shutil.rmtree(IMG_DIR)
     extract_images(CROPPED_VID_DIR, True)
